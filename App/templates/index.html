@@ -1,0 +1,57 @@
+<!-- templates/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Parthib AI Assistant — Demo</title>
+  <link rel="stylesheet" href="../static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Parthib AI Assistant</h1>
+
+    <div class="controls">
+      <label>Function
+        <select id="function">
+          <option value="answer">Answer (Factual)</option>
+          <option value="summarize">Summarize</option>
+          <option value="create">Creative</option>
+        </select>
+      </label>
+
+      <label>Template
+        <select id="template">
+          <option value="short">Short</option>
+          <option value="medium" selected>Medium</option>
+          <option value="long">Long</option>
+        </select>
+      </label>
+    </div>
+
+    <textarea id="user_input" placeholder="Type your question, paste text to summarize, or give a creative brief..." rows="8"></textarea>
+
+    <div class="extras" id="extras">
+      <!-- extras like tone/audience will be injected here -->
+    </div>
+
+    <button id="submit">Ask Assistant</button>
+
+    <div id="response_area" class="card hidden">
+      <h3>Assistant Response</h3>
+      <pre id="response_text"></pre>
+      <div class="feedback">
+        <span>Helpful?</span>
+        <button id="fb_yes">Yes</button>
+        <button id="fb_no">No</button>
+        <input id="fb_comment" placeholder="Optional comment" />
+      </div>
+    </div>
+
+    <div id="status"></div>
+
+    <hr />
+    <small>Tip: Use "Summarize" with medium template for bullet summaries. Save screenshots for your PPT demo.</small>
+    <script src="../static/script.js"></script>
+  </div>
+</body>
+</html>
